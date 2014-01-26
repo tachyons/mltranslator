@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=English Malayalam translator
+Categories=Development;Translation
+Exec=/usr/bin/mltranslator
+Icon=/usr/share/icons/mltranslator.png
+Name[en]=mltranslator

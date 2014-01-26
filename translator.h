@@ -1,0 +1,48 @@
+#ifndef TRANSLATOR_H
+#define TRANSLATOR_H
+
+#include <QMainWindow>
+#include <QComboBox>
+#include "about.h"
+#include "convertfiles.h"
+#include <QFile>
+#include <QFileDialog>
+#include <QMessageBox>
+#include <QTextStream>
+#include <QProcess>
+#include <iostream>
+
+namespace Ui {
+class Translator;
+}
+
+class Translator : public QMainWindow
+{
+    Q_OBJECT
+    
+public:
+    explicit Translator(QWidget *parent = 0);
+    ~Translator();
+    
+private slots:
+    void on_action_New_triggered();
+
+    void on_action_About_triggered();
+
+    void on_action_Open_triggered();
+
+    void on_action_Translate_triggered();
+
+    void on_action_PLay_triggered();
+    QString get_lang();
+
+    void on_action_Exit_triggered();
+
+    void on_action_Convert_file_triggered();
+
+private:
+    Ui::Translator *ui;
+    void initialise_ui();
+};
+
+#endif // TRANSLATOR_H
