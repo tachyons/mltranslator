@@ -8,5 +8,6 @@
         <file>icons/media-playback-start.svg</file>
         <file>icons/help-about.svg</file>
         <file>icons/application-exit.svg</file>
+        <file>icons/mltranslator.png</file>
     </qresource>
 </RCC>

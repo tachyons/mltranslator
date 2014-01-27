@@ -59,6 +59,7 @@ void ConvertFiles::on_convert_buton_clicked()
     qDebug()<<command;
     fileconverter.start(command);
     fileconverter.waitForFinished(-1);
+    int ret = QMessageBox::information(this, tr("My Application"),fileconverter.readAllStandardOutput(),QMessageBox::Ok);
 }
 
 void ConvertFiles::on_pair_selector_currentIndexChanged(const QString &arg1)
