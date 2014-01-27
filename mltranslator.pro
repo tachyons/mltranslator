@@ -15,15 +15,19 @@ TEMPLATE = app
 SOURCES += main.cpp\
         translator.cpp\
         about.cpp \
-    convertfiles.cpp
+    convertfiles.cpp \
+    preferences.cpp
+
 
 HEADERS  += translator.h\
             about.h \
-    convertfiles.h
+    convertfiles.h \
+    preferences.h
 
 FORMS    += translator.ui\
             about.ui \
-    convertfiles.ui
+    convertfiles.ui \
+    preferences.ui
 
 TRANSLATIONS = mltranslator_mal.ts \
                 mltranslator_eng.ts

@@ -5,6 +5,7 @@
 #include <QComboBox>
 #include "about.h"
 #include "convertfiles.h"
+#include "preferences.h"
 #include <QFile>
 #include <QFileDialog>
 #include <QMessageBox>
@@ -39,6 +40,8 @@ private slots:
     void on_action_Exit_triggered();
 
     void on_action_Convert_file_triggered();
+
+    void on_action_Preferences_triggered();
 
 private:
     Ui::Translator *ui;

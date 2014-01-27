@@ -74,7 +74,12 @@ void Translator::on_action_Translate_triggered()
     //get output
     QString p_stdout = target.readAllStandardOutput();
     QString p_stderr = target.readAllStandardError();
-    ui->target_text->setText(p_stdout.append(p_stderr));
+    QString target_text;
+    target_text=p_stdout.append(p_stderr);
+    target_text.remove('*');
+    target_text.remove('#');
+
+    ui->target_text->setText(target_text);
     //ui->target_text->setText("dchf");
     ui->statusBar->showMessage("Translated");
 }
@@ -89,9 +94,10 @@ void Translator::on_action_PLay_triggered()
    command+=" \"";
    command=command.remove('#');
    command=command.remove('*');
-   ui->statusBar->showMessage(command);
+   ui->statusBar->showMessage("playing");
    play.start(command);
    play.waitForFinished(-1);
+   ui->statusBar->showMessage("ready");
 }
 QString Translator::get_lang()
 {
@@ -109,5 +115,11 @@ void Translator::on_action_Exit_triggered()
 void Translator::on_action_Convert_file_triggered()
 {
     ConvertFiles *dialog = new ConvertFiles();
+    dialog->show();
+}
+
+void Translator::on_action_Preferences_triggered()
+{
+    Preferences *dialog = new Preferences();
     dialog->show();
 }
