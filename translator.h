@@ -12,6 +12,7 @@
 #include <QTextStream>
 #include <QProcess>
 #include <iostream>
+#include <QSettings>
 
 namespace Ui {
 class Translator;

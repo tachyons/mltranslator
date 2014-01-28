@@ -7,6 +7,8 @@ Translator::Translator(QWidget *parent) :
 {
     ui->setupUi(this);
     initialise_ui();
+    QSettings settings("Tachyons Creations", "mltranslator");
+
 }
 
 Translator::~Translator()
