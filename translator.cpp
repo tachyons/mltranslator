@@ -8,6 +8,7 @@ Translator::Translator(QWidget *parent) :
     ui->setupUi(this);
     initialise_ui();
     QSettings settings("Tachyons Creations", "mltranslator");
+    LoadSettings();
 
 }
 
@@ -22,7 +23,7 @@ void Translator::initialise_ui()
 
 void Translator::on_action_New_triggered()
 {
-
+    ui->source_text->clear();
 }
 
 void Translator::on_action_About_triggered()
@@ -91,12 +92,16 @@ void Translator::on_action_PLay_triggered()
    QProcess play;
    QString command;
    command+="espeak ";
-   command+="-v ml \"";
+   command+="-v ml ";
+   command+="-a ";
+   command+=QString(SoundAmplitude);
+   command+=" \"";
    command+=ui->target_text->toPlainText();
    command+=" \"";
    command=command.remove('#');
    command=command.remove('*');
-   ui->statusBar->showMessage("playing");
+   //ui->statusBar->showMessage("playing");
+   ui->statusBar->showMessage(command);
    play.start(command);
    play.waitForFinished(-1);
    ui->statusBar->showMessage("ready");
@@ -124,4 +129,16 @@ void Translator::on_action_Preferences_triggered()
 {
     Preferences *dialog = new Preferences();
     dialog->show();
+}
+void Translator::LoadSettings()
+{
+    QSettings settings("tachyons", "mltranslator");
+    settings.beginGroup("preferences");
+    UiLanguage=settings.value("uilanguage").toString();
+    UiTheme=settings.value("theme").toString();
+    IsShowAmbiguity=settings.value("ambiguity").toBool();
+    IsSplashScreen=settings.value("splashscreen").toBool();
+    SoundAmplitude=settings.value("soundamplitude").toInt();
+    settings.endGroup();
+    qDebug()<<"Loaded";
 }

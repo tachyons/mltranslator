@@ -25,6 +25,12 @@ class Translator : public QMainWindow
 public:
     explicit Translator(QWidget *parent = 0);
     ~Translator();
+    void LoadSettings();
+    QString UiLanguage;
+    QString UiTheme;
+    bool IsSplashScreen;
+    bool IsShowAmbiguity;
+    int SoundAmplitude;
     
 private slots:
     void on_action_New_triggered();
