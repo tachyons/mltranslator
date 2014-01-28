@@ -6,16 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>456</width>
-    <height>363</height>
+    <width>557</width>
+    <height>467</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Preferences</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_3">
-    <item>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
@@ -51,7 +51,7 @@
            </property>
            <property name="icon">
             <iconset resource="icons.qrc">
-             <normaloff>:/new/prefix1/icons/poedit.png</normaloff>:/new/prefix1/icons/poedit.png</iconset>
+             <normaloff>:/new/prefix1/icons/mltranslator.png</normaloff>:/new/prefix1/icons/mltranslator.png</iconset>
            </property>
           </item>
           <item>
@@ -91,7 +91,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="comboBox">
+               <widget class="QComboBox" name="ThemeSlector">
                 <item>
                  <property name="text">
                   <string>Wooden</string>
@@ -109,7 +109,7 @@
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_3">
               <item>
-               <widget class="QCheckBox" name="checkBox">
+               <widget class="QCheckBox" name="IsSplashScreen">
                 <property name="text">
                  <string>Splash Screen</string>
                 </property>
@@ -127,7 +127,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="comboBox_2">
+               <widget class="QComboBox" name="LanguageSelector">
                 <item>
                  <property name="text">
                   <string>Malayalam</string>
@@ -145,47 +145,104 @@
            </layout>
           </widget>
           <widget class="QWidget" name="translator_tab">
-           <widget class="QCheckBox" name="checkBox_2">
-            <property name="geometry">
-             <rect>
-              <x>37</x>
-              <y>40</y>
-              <width>151</width>
-              <height>22</height>
-             </rect>
-            </property>
-            <property name="text">
-             <string>Show ambiguity</string>
-            </property>
-           </widget>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QGroupBox" name="groupBox">
+              <property name="title">
+               <string>Translator</string>
+              </property>
+              <widget class="QCheckBox" name="ShowAmbiguity">
+               <property name="geometry">
+                <rect>
+                 <x>20</x>
+                 <y>30</y>
+                 <width>127</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Show ambiguity</string>
+               </property>
+              </widget>
+             </widget>
+            </item>
+           </layout>
           </widget>
           <widget class="QWidget" name="sound_tab">
-           <widget class="QWidget" name="layoutWidget">
-            <property name="geometry">
-             <rect>
-              <x>20</x>
-              <y>40</y>
-              <width>251</width>
-              <height>31</height>
-             </rect>
-            </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_5">
-             <item>
-              <widget class="QLabel" name="label">
-               <property name="text">
-                <string>Frequency</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QSlider" name="horizontalSlider">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QLabel" name="label">
+                <property name="text">
+                 <string>Amplitude</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="AmplitudeSlider">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>WordGap</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="WordGapSlider">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <item>
+               <widget class="QLabel" name="PitchLabel">
+                <property name="text">
+                 <string>Pitch Adjustment</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="PitchSlider">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_9">
+              <item>
+               <widget class="QLabel" name="SpeedLabel">
+                <property name="text">
+                 <string>Speed</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="SpeedSlider">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
           </widget>
           <widget class="QWidget" name="page_2"/>
          </widget>
@@ -208,7 +265,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>456</width>
+     <width>557</width>
      <height>20</height>
     </rect>
    </property>
@@ -218,5 +275,22 @@
  <resources>
   <include location="icons.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Preferences</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>227</x>
+     <y>319</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>227</x>
+     <y>181</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
