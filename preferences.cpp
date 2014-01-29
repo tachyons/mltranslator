@@ -92,3 +92,23 @@ void Preferences::on_IsMarkUnknownWords_toggled(bool checked)
 {
      MarkUnknownWords=checked;
 }
+
+void Preferences::on_WordGapSlider_sliderMoved(int position)
+{
+
+}
+
+void Preferences::on_PitchSlider_sliderMoved(int position)
+{
+
+}
+
+void Preferences::on_SpeedSlider_sliderMoved(int position)
+{
+
+}
+
+void Preferences::on_ThemeSlector_currentTextChanged(const QString &arg1)
+{
+    qApp->setStyleSheet(arg1);
+}

@@ -33,7 +33,8 @@ TRANSLATIONS = mltranslator_mal.ts \
                 mltranslator_eng.ts
 
 RESOURCES += \
-    icons.qrc
+    icons.qrc \
+    themes.qrc
 
 unix {
     INSTALLS += target data icon desktopfile

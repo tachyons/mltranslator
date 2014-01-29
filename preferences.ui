@@ -103,6 +103,21 @@
                    <string>Plastique</string>
                   </property>
                  </item>
+                 <item>
+                  <property name="text">
+                   <string>coffee</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>dolphin.qss</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>pagefold</string>
+                  </property>
+                 </item>
                 </widget>
                </item>
               </layout>
@@ -195,6 +210,9 @@
                </item>
                <item>
                 <widget class="QSlider" name="AmplitudeSlider">
+                 <property name="value">
+                  <number>0</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>

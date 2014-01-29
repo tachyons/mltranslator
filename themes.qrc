@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file alias="dolphin">theme/dolphin.qss</file>
+        <file alias="coffee">theme/coffee.qss</file>
+        <file alias="pagefold">theme/pagefold.qss</file>
+    </qresource>
+</RCC>

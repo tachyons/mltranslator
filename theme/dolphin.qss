@@ -1,0 +1,160 @@
+/* sidebar resize grip, not themable? */
+QSplitterHandle *
+{
+background-color: #F00;
+width: 3px;
+}
+
+/* sidebar */
+QDockWidget
+{
+image:none;
+background: #E0DFDE;
+color: #777;
+font-weight:bold;
+border: 0;
+border-image:none;
+}
+
+/* everything in sidebar */
+QDockWidget *
+{
+background: transparent;
+color: #111;
+border:0;
+border-image:none;
+border-radius: 0px;
+margin-left: -3px;
+}
+
+/* sidebar ttle */
+QDockWidget::title
+{
+border: 0;
+padding: 5px;
+margin-right: -6px;
+vertical-align:middle;
+}
+
+/* hide horzontal scrollbar in sidebar */
+QDockWidget::QScrollBar::horizontal
+{
+height: 0px;
+margin: 20px 0 20px 0;
+}
+
+/* tab container */
+QTabBar
+{
+image:none;
+background: #D6DDE5;
+}
+
+/* tab */
+QTabBar::tab
+{
+text-align: right;
+padding: 2px;
+margin-left: 1px;
+margin-right: 1px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+background: #999;
+color: #EEE;
+}
+
+/* selected tab */
+QTabBar::tab:selected
+{
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                  stop: 0 #777, stop: 1.0 #888);
+color: #EEE;
+}
+
+/* tooltps */
+QToolTip
+{
+background: #181818;
+color: #FFF;
+padding: 3px;
+border-radius: 5px;
+opacity: 200;
+}
+
+
+/* folderview */
+QListView,QListView:selected
+{
+background: #FFF url("shade_left.png") repeat-y left;
+border-top: 1px solid #999;
+border-bottom: 1px solid #999;
+border-left: 1px solid #FFF;
+padding-top: 3px;
+padding-bottom: 5px;
+border-image:none;
+color: #444;
+}
+
+/* toolbars */
+QToolBar{
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #7C7C7C, stop: 1.0 #666);
+width: 1px;
+border-bottom: 1px solid #333;
+padding: 5px;
+border-left: 1px solid #AAA;
+border-right: 1px solid #AAA;
+}
+
+/* toolbar handles */
+QToolBar::Handle
+{
+background: #555;
+margin-left: 5px;
+}
+
+/* toolbar buttons */
+QToolButton
+{
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #AAA, stop: 1.0 #777);
+padding-left:6px;
+padding-right:0px;
+padding-top:2px;
+padding-bottom:2px;
+border: 1px solid #666;
+border-radius: 3px;
+height: 13px;
+}
+
+/* toolbar search */
+QToolBar QLineEdit
+{
+background: #FFF;
+border: 1px solid #666;
+border-top: 1px solid #555;
+padding: 2px;
+padding-left: 5px;
+border-radius: 10px;
+margin-right: 3px;
+}
+
+/*navigation bar and statusbar*/
+QSplitter
+{
+background: #D6DDE5 url("shade_left.png") repeat-y left;
+border-left: 1px solid #FFF;
+}
+
+QSplitter *
+{
+color: #385F75;
+}
+
+/* statusbar and folderview*/
+QSplitter QFrame
+{
+}
+
+QDockWidget {
+border: 0px;
+: 0px ;
+}

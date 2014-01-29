@@ -45,6 +45,14 @@ private slots:
 
     void on_IsMarkUnknownWords_toggled(bool checked);
 
+    void on_WordGapSlider_sliderMoved(int position);
+
+    void on_PitchSlider_sliderMoved(int position);
+
+    void on_SpeedSlider_sliderMoved(int position);
+
+    void on_ThemeSlector_currentTextChanged(const QString &arg1);
+
 private:
     Ui::Preferences *ui;
 };
