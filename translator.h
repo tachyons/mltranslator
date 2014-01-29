@@ -25,7 +25,7 @@ class Translator : public QMainWindow
 public:
     explicit Translator(QWidget *parent = 0);
     ~Translator();
-    void LoadSettings();
+
     QString UiLanguage;
     QString UiTheme;
     bool IsSplashScreen;
@@ -50,6 +50,7 @@ private slots:
     void on_action_Convert_file_triggered();
 
     void on_action_Preferences_triggered();
+    void LoadSettings();
 
 private:
     Ui::Translator *ui;

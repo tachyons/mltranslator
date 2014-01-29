@@ -2,7 +2,7 @@
 #include "ui_preferences.h"
 
 Preferences::Preferences(QWidget *parent) :
-    QMainWindow(parent),
+    QDialog(parent),
     ui(new Ui::Preferences)
 {
     ui->setupUi(this);
@@ -13,6 +13,7 @@ Preferences::Preferences(QWidget *parent) :
     ui->IsSplashScreen->setChecked(IsSplashScreen);
     ui->ShowAmbiguity->setChecked(IsShowAmbiguity);
     ui->IsMarkUnknownWords->setChecked(MarkUnknownWords);
+    //connect(this,SIGNAL(destroyed()),parent,SLOT(LoadSettings()));
 }
 
 Preferences::~Preferences()
@@ -49,7 +50,7 @@ void Preferences::StoreSettings()
     settings.setValue("soundamplitude",SoundAmplitude);
     settings.setValue("unknownwords",MarkUnknownWords);
     settings.endGroup();
-    qDebug()<<"stored";
+    qDebug()<<"stored from preferences";
 }
 
 void Preferences::on_ThemeSlector_currentIndexChanged(const QString &arg1)

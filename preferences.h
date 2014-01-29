@@ -1,7 +1,7 @@
 #ifndef PREFERENCES_H
 #define PREFERENCES_H
 
-#include <QMainWindow>
+#include <QDialog>
 #include <QSettings>
 #include<QDebug>
 
@@ -9,7 +9,7 @@ namespace Ui {
 class Preferences;
 }
 
-class Preferences : public QMainWindow
+class Preferences : public QDialog
 {
     Q_OBJECT
     

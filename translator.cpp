@@ -135,8 +135,10 @@ void Translator::on_action_Convert_file_triggered()
 void Translator::on_action_Preferences_triggered()
 {
     Preferences *dialog = new Preferences();
-    dialog->show();
+    //connect(dialog,SIGNAL(destroyed(QObject* )),this,SLOT(LoadSettings()));
+    dialog->exec();
     LoadSettings();
+    //dialog->connect(dialog,SIGNAL(destroyed(QObject*)),this,SLOT(LoadSettings()));
 }
 void Translator::LoadSettings()
 {
@@ -149,5 +151,5 @@ void Translator::LoadSettings()
     SoundAmplitude=settings.value("soundamplitude").toInt();
     MarkUnknownWords=settings.value("unknownwords").toBool();
     settings.endGroup();
-    qDebug()<<"Loaded";
+    qDebug()<<"Loaded to translator";
 }
