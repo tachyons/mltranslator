@@ -23,6 +23,7 @@ public:
     bool IsSplashScreen;
     bool IsShowAmbiguity;
     int SoundAmplitude;
+    bool MarkUnknownWords;
 
     
 private slots:
@@ -41,6 +42,8 @@ private slots:
     void on_buttonBox_accepted();
 
     void on_ShowAmbiguity_toggled(bool checked);
+
+    void on_IsMarkUnknownWords_toggled(bool checked);
 
 private:
     Ui::Preferences *ui;

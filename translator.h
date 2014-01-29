@@ -31,6 +31,7 @@ public:
     bool IsSplashScreen;
     bool IsShowAmbiguity;
     int SoundAmplitude;
+    bool MarkUnknownWords;
     
 private slots:
     void on_action_New_triggered();
