@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Translator</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
@@ -32,7 +35,11 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QTextEdit" name="source_text"/>
+       <widget class="QTextEdit" name="source_text">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QTextBrowser" name="target_text"/>
@@ -47,7 +54,7 @@
      <x>0</x>
      <y>0</y>
      <width>662</width>
-     <height>25</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">

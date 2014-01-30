@@ -2,7 +2,7 @@
 #include "ui_preferences.h"
 
 Preferences::Preferences(QWidget *parent) :
-    QMainWindow(parent),
+    QDialog(parent),
     ui(new Ui::Preferences)
 {
     ui->setupUi(this);
@@ -12,11 +12,12 @@ Preferences::Preferences(QWidget *parent) :
     ui->AmplitudeSlider->setValue(SoundAmplitude);
     ui->IsSplashScreen->setChecked(IsSplashScreen);
     ui->ShowAmbiguity->setChecked(IsShowAmbiguity);
+    ui->IsMarkUnknownWords->setChecked(MarkUnknownWords);
+    //connect(this,SIGNAL(destroyed()),parent,SLOT(LoadSettings()));
 }
 
 Preferences::~Preferences()
 {
-    StoreSettings();
     delete ui;
 }
 
@@ -33,6 +34,7 @@ void Preferences::LoadSettings()
     IsShowAmbiguity=settings.value("ambiguity").toBool();
     IsSplashScreen=settings.value("splashscreen").toBool();
     SoundAmplitude=settings.value("soundamplitude").toInt();
+    MarkUnknownWords=settings.value("unknownwords").toBool();
     settings.endGroup();
     qDebug()<<"Loaded";
 
@@ -46,8 +48,9 @@ void Preferences::StoreSettings()
     settings.setValue("ambiguity",IsShowAmbiguity);
     settings.setValue("splashscreen",IsSplashScreen);
     settings.setValue("soundamplitude",SoundAmplitude);
+    settings.setValue("unknownwords",MarkUnknownWords);
     settings.endGroup();
-    qDebug()<<"stored";
+    qDebug()<<"stored from preferences";
 }
 
 void Preferences::on_ThemeSlector_currentIndexChanged(const QString &arg1)
@@ -83,4 +86,29 @@ void Preferences::on_buttonBox_accepted()
 void Preferences::on_ShowAmbiguity_toggled(bool checked)
 {
     IsShowAmbiguity=checked;
+}
+
+void Preferences::on_IsMarkUnknownWords_toggled(bool checked)
+{
+     MarkUnknownWords=checked;
+}
+
+void Preferences::on_WordGapSlider_sliderMoved(int position)
+{
+
+}
+
+void Preferences::on_PitchSlider_sliderMoved(int position)
+{
+
+}
+
+void Preferences::on_SpeedSlider_sliderMoved(int position)
+{
+
+}
+
+void Preferences::on_ThemeSlector_currentTextChanged(const QString &arg1)
+{
+    qApp->setStyleSheet(arg1);
 }

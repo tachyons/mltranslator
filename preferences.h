@@ -1,7 +1,7 @@
 #ifndef PREFERENCES_H
 #define PREFERENCES_H
 
-#include <QMainWindow>
+#include <QDialog>
 #include <QSettings>
 #include<QDebug>
 
@@ -9,7 +9,7 @@ namespace Ui {
 class Preferences;
 }
 
-class Preferences : public QMainWindow
+class Preferences : public QDialog
 {
     Q_OBJECT
     
@@ -23,6 +23,7 @@ public:
     bool IsSplashScreen;
     bool IsShowAmbiguity;
     int SoundAmplitude;
+    bool MarkUnknownWords;
 
     
 private slots:
@@ -41,6 +42,16 @@ private slots:
     void on_buttonBox_accepted();
 
     void on_ShowAmbiguity_toggled(bool checked);
+
+    void on_IsMarkUnknownWords_toggled(bool checked);
+
+    void on_WordGapSlider_sliderMoved(int position);
+
+    void on_PitchSlider_sliderMoved(int position);
+
+    void on_SpeedSlider_sliderMoved(int position);
+
+    void on_ThemeSlector_currentTextChanged(const QString &arg1);
 
 private:
     Ui::Preferences *ui;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>Preferences</class>
- <widget class="QMainWindow" name="Preferences">
+ <widget class="QDialog" name="Preferences">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,264 +13,286 @@
   <property name="windowTitle">
    <string>Preferences</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QListWidget" name="listWidget">
-          <property name="maximumSize">
-           <size>
-            <width>150</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="dragEnabled">
-           <bool>false</bool>
-          </property>
-          <property name="movement">
-           <enum>QListView::Static</enum>
-          </property>
-          <property name="flow">
-           <enum>QListView::LeftToRight</enum>
-          </property>
-          <property name="layoutMode">
-           <enum>QListView::SinglePass</enum>
-          </property>
-          <property name="spacing">
-           <number>35</number>
-          </property>
-          <property name="viewMode">
-           <enum>QListView::IconMode</enum>
-          </property>
-          <item>
-           <property name="text">
-            <string>Interface</string>
+  <layout class="QVBoxLayout" name="verticalLayout_5">
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QListWidget" name="listWidget">
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
            </property>
-           <property name="icon">
-            <iconset resource="icons.qrc">
-             <normaloff>:/new/prefix1/icons/mltranslator.png</normaloff>:/new/prefix1/icons/mltranslator.png</iconset>
+           <property name="dragEnabled">
+            <bool>false</bool>
            </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>translator</string>
+           <property name="movement">
+            <enum>QListView::Static</enum>
            </property>
-           <property name="icon">
-            <iconset resource="icons.qrc">
-             <normaloff>:/new/prefix1/icons/poedit.png</normaloff>:/new/prefix1/icons/poedit.png</iconset>
+           <property name="flow">
+            <enum>QListView::LeftToRight</enum>
            </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>sound</string>
+           <property name="layoutMode">
+            <enum>QListView::SinglePass</enum>
            </property>
-           <property name="icon">
-            <iconset resource="icons.qrc">
-             <normaloff>:/new/prefix1/icons/media-playback-start.svg</normaloff>:/new/prefix1/icons/media-playback-start.svg</iconset>
+           <property name="spacing">
+            <number>35</number>
            </property>
-          </item>
-         </widget>
-        </item>
-        <item>
-         <widget class="QStackedWidget" name="preferences_tabs">
-          <property name="currentIndex">
-           <number>2</number>
-          </property>
-          <widget class="QWidget" name="interface_tab">
-           <layout class="QVBoxLayout" name="verticalLayout">
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_2">
-              <item>
-               <widget class="QLabel" name="label_4">
-                <property name="text">
-                 <string>Theme</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QComboBox" name="ThemeSlector">
-                <item>
-                 <property name="text">
-                  <string>Wooden</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Plastique</string>
-                 </property>
-                </item>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_3">
-              <item>
-               <widget class="QCheckBox" name="IsSplashScreen">
-                <property name="text">
-                 <string>Splash Screen</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_4">
-              <item>
-               <widget class="QLabel" name="label_5">
-                <property name="text">
-                 <string>Language</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QComboBox" name="LanguageSelector">
-                <item>
-                 <property name="text">
-                  <string>Malayalam</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>English</string>
-                 </property>
-                </item>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
+           <property name="viewMode">
+            <enum>QListView::IconMode</enum>
+           </property>
+           <item>
+            <property name="text">
+             <string>Interface</string>
+            </property>
+            <property name="icon">
+             <iconset resource="icons.qrc">
+              <normaloff>:/new/prefix1/icons/mltranslator.png</normaloff>:/new/prefix1/icons/mltranslator.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>translator</string>
+            </property>
+            <property name="icon">
+             <iconset resource="icons.qrc">
+              <normaloff>:/new/prefix1/icons/poedit.png</normaloff>:/new/prefix1/icons/poedit.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Sound</string>
+            </property>
+            <property name="icon">
+             <iconset resource="icons.qrc">
+              <normaloff>:/new/prefix1/icons/media-playback-start.svg</normaloff>:/new/prefix1/icons/media-playback-start.svg</iconset>
+            </property>
+           </item>
           </widget>
-          <widget class="QWidget" name="translator_tab">
-           <layout class="QHBoxLayout" name="horizontalLayout_6">
-            <item>
-             <widget class="QGroupBox" name="groupBox">
-              <property name="title">
-               <string>Translator</string>
-              </property>
-              <widget class="QCheckBox" name="ShowAmbiguity">
-               <property name="geometry">
-                <rect>
-                 <x>20</x>
-                 <y>30</y>
-                 <width>281</width>
-                 <height>21</height>
-                </rect>
+         </item>
+         <item>
+          <widget class="QStackedWidget" name="preferences_tabs">
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="interface_tab">
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <widget class="QLabel" name="label_4">
+                 <property name="text">
+                  <string>Theme</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="ThemeSlector">
+                 <item>
+                  <property name="text">
+                   <string>Wooden</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Plastique</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>coffee</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>dolphin.qss</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>pagefold</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QCheckBox" name="IsSplashScreen">
+                 <property name="text">
+                  <string>Splash Screen</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <widget class="QLabel" name="label_5">
+                 <property name="text">
+                  <string>Language</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="LanguageSelector">
+                 <item>
+                  <property name="text">
+                   <string>Malayalam</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>English</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="translator_tab">
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QGroupBox" name="groupBox">
+               <property name="title">
+                <string>Translator</string>
                </property>
-               <property name="text">
-                <string>Show ambiguity</string>
-               </property>
+               <widget class="QWidget" name="layoutWidget">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>30</y>
+                  <width>271</width>
+                  <height>52</height>
+                 </rect>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_3">
+                 <item>
+                  <widget class="QCheckBox" name="ShowAmbiguity">
+                   <property name="text">
+                    <string>Show ambiguity</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="IsMarkUnknownWords">
+                   <property name="text">
+                    <string>Mark Unknown Words</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
               </widget>
-             </widget>
-            </item>
-           </layout>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="sound_tab">
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item>
+                <widget class="QLabel" name="label">
+                 <property name="text">
+                  <string>Amplitude</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSlider" name="AmplitudeSlider">
+                 <property name="value">
+                  <number>0</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_7">
+               <item>
+                <widget class="QLabel" name="label_2">
+                 <property name="text">
+                  <string>WordGap</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSlider" name="WordGapSlider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_8">
+               <item>
+                <widget class="QLabel" name="PitchLabel">
+                 <property name="text">
+                  <string>Pitch Adjustment</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSlider" name="PitchSlider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_9">
+               <item>
+                <widget class="QLabel" name="SpeedLabel">
+                 <property name="text">
+                  <string>Speed</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSlider" name="SpeedSlider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="page_2"/>
           </widget>
-          <widget class="QWidget" name="sound_tab">
-           <layout class="QVBoxLayout" name="verticalLayout_4">
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_5">
-              <item>
-               <widget class="QLabel" name="label">
-                <property name="text">
-                 <string>Amplitude</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QSlider" name="AmplitudeSlider">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_7">
-              <item>
-               <widget class="QLabel" name="label_2">
-                <property name="text">
-                 <string>WordGap</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QSlider" name="WordGapSlider">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_8">
-              <item>
-               <widget class="QLabel" name="PitchLabel">
-                <property name="text">
-                 <string>Pitch Adjustment</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QSlider" name="PitchSlider">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_9">
-              <item>
-               <widget class="QLabel" name="SpeedLabel">
-                <property name="text">
-                 <string>Speed</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QSlider" name="SpeedSlider">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="page_2"/>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <widget class="QDialogButtonBox" name="buttonBox">
-        <property name="standardButtons">
-         <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>557</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QDialogButtonBox" name="buttonBox">
+         <property name="standardButtons">
+          <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources>
   <include location="icons.qrc"/>
@@ -283,12 +305,12 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>227</x>
-     <y>319</y>
+     <x>278</x>
+     <y>444</y>
     </hint>
     <hint type="destinationlabel">
-     <x>227</x>
-     <y>181</y>
+     <x>278</x>
+     <y>233</y>
     </hint>
    </hints>
   </connection>

@@ -67,11 +67,18 @@ void Translator::on_action_Translate_triggered()
     source.start(source_text.prepend("echo \""));
     source.waitForFinished(-1);
     QString command;
-    command+="apertium -d ";
+    command+="apertium";
+    qDebug()<<MarkUnknownWords;
+    if(MarkUnknownWords==false)
+    {
+        command+=" -u";
+    }
+    command+=" -d ";
     command+= QDir::homePath();
     command+= "/apertium-mal-eng ";
     command+=pair;
     command+="\"";
+    qDebug()<<command;
     target.start(command);
     target.waitForFinished(-1);
     //get output
@@ -79,8 +86,8 @@ void Translator::on_action_Translate_triggered()
     QString p_stderr = target.readAllStandardError();
     QString target_text;
     target_text=p_stdout.append(p_stderr);
-    target_text.remove('*');
-    target_text.remove('#');
+    //target_text.remove('*');
+    //target_text.remove('#');
 
     ui->target_text->setText(target_text);
     //ui->target_text->setText("dchf");
@@ -128,7 +135,10 @@ void Translator::on_action_Convert_file_triggered()
 void Translator::on_action_Preferences_triggered()
 {
     Preferences *dialog = new Preferences();
-    dialog->show();
+    //connect(dialog,SIGNAL(destroyed(QObject* )),this,SLOT(LoadSettings()));
+    dialog->exec();
+    LoadSettings();
+    //dialog->connect(dialog,SIGNAL(destroyed(QObject*)),this,SLOT(LoadSettings()));
 }
 void Translator::LoadSettings()
 {
@@ -139,6 +149,7 @@ void Translator::LoadSettings()
     IsShowAmbiguity=settings.value("ambiguity").toBool();
     IsSplashScreen=settings.value("splashscreen").toBool();
     SoundAmplitude=settings.value("soundamplitude").toInt();
+    MarkUnknownWords=settings.value("unknownwords").toBool();
     settings.endGroup();
-    qDebug()<<"Loaded";
+    qDebug()<<"Loaded to translator";
 }
