@@ -101,7 +101,7 @@ void Translator::on_action_PLay_triggered()
    command+="espeak ";
    command+="-v ml ";
    command+="-a ";
-   command+=QString(SoundAmplitude);
+   command+=QString::number(SoundAmplitude);
    command+=" \"";
    command+=ui->target_text->toPlainText();
    command+=" \"";
@@ -152,4 +152,40 @@ void Translator::LoadSettings()
     MarkUnknownWords=settings.value("unknownwords").toBool();
     settings.endGroup();
     qDebug()<<"Loaded to translator";
+}
+
+void Translator::on_actionMal_eng_triggered()
+{
+    QProcess *mal_eng=new QProcess;
+    QString workdir=QDir::homePath();
+    mal_eng->setWorkingDirectory(workdir.append("/apertium-mal-eng"));
+    mal_eng->setWorkingDirectory(workdir);
+    //mal_eng.start("gedit");
+    QStringList arguments;
+    arguments << "apertium-mal-eng.mal-eng.t1x"<<"apertium-mal-eng.mal-eng.t2x"<<"apertium-mal-eng.mal-eng.t3x";
+    mal_eng->start("gedit",arguments);
+    mal_eng->waitForStarted(-1);
+}
+
+void Translator::on_actionEng_mal_triggered()
+{
+    QProcess eng_mal;
+    QString workdir=QDir::homePath();
+    eng_mal.setWorkingDirectory(workdir.append("/apertium-mal-eng"));
+    eng_mal.setWorkingDirectory(workdir);
+    //mal_eng.start("gedit");
+    QStringList arguments;
+    arguments << "apertium-mal-eng.mal-eng.t1x"<<"apertium-mal-eng.mal-eng.t2x"<<"apertium-mal-eng.mal-eng.t3x";
+    eng_mal.start("gedit",arguments);
+    eng_mal.waitForStarted(-1);
+}
+
+void Translator::on_action_Compile_triggered()
+{
+    QProcess compile;
+    QString workdir=QDir::homePath();
+    workdir=workdir.append("/apertium-mal-eng");
+    compile.setWorkingDirectory(workdir);
+    compile.start("make");
+    compile.waitForFinished(-1);
 }

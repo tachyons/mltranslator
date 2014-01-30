@@ -52,6 +52,12 @@ private slots:
     void on_action_Preferences_triggered();
     void LoadSettings();
 
+    void on_actionMal_eng_triggered();
+
+    void on_actionEng_mal_triggered();
+
+    void on_action_Compile_triggered();
+
 private:
     Ui::Translator *ui;
     void initialise_ui();

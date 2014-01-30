@@ -54,7 +54,7 @@
      <x>0</x>
      <y>0</y>
      <width>662</width>
-     <height>20</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -87,8 +87,23 @@
     <addaction name="action_PLay"/>
     <addaction name="action_Translate"/>
    </widget>
+   <widget class="QMenu" name="menu_Developer">
+    <property name="title">
+     <string>&amp;Developer</string>
+    </property>
+    <widget class="QMenu" name="menu_Add_New_Rule">
+     <property name="title">
+      <string>&amp;Add New Rule</string>
+     </property>
+     <addaction name="actionMal_eng"/>
+     <addaction name="actionEng_mal"/>
+    </widget>
+    <addaction name="menu_Add_New_Rule"/>
+    <addaction name="action_Compile"/>
+   </widget>
    <addaction name="menu_File"/>
    <addaction name="menu_Edit"/>
+   <addaction name="menu_Developer"/>
    <addaction name="menu_View"/>
    <addaction name="menu_Help"/>
   </widget>
@@ -184,6 +199,21 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionMal_eng">
+   <property name="text">
+    <string>mal-eng</string>
+   </property>
+  </action>
+  <action name="actionEng_mal">
+   <property name="text">
+    <string>eng-mal</string>
+   </property>
+  </action>
+  <action name="action_Compile">
+   <property name="text">
+    <string>&amp;Compile</string>
    </property>
   </action>
  </widget>
