@@ -149,6 +149,118 @@
     </message>
 </context>
 <context>
+    <name>NewWord</name>
+    <message>
+        <location filename="newword.ui" line="23"/>
+        <source>Lemma</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.ui" line="37"/>
+        <source>Word</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.ui" line="51"/>
+        <source>pos</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.ui" line="59"/>
+        <source>Noun</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.ui" line="64"/>
+        <source>Verb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.ui" line="69"/>
+        <source>Adjective</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.ui" line="74"/>
+        <source>Adverb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.ui" line="86"/>
+        <source>paradigm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.ui" line="100"/>
+        <source>preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.ui" line="117"/>
+        <source>Add to monolingual dictionary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.ui" line="120"/>
+        <source>add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.ui" line="136"/>
+        <source>&amp;Open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.ui" line="141"/>
+        <source>&amp;Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.ui" line="146"/>
+        <source>&amp;Exit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.ui" line="151"/>
+        <source> &amp;About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.cpp" line="23"/>
+        <location filename="newword.cpp" line="40"/>
+        <source>Open File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.cpp" line="24"/>
+        <location filename="newword.cpp" line="41"/>
+        <source>Monolingual dictionary (*.dix);;xml files (*.xml</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.cpp" line="30"/>
+        <location filename="newword.cpp" line="47"/>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.cpp" line="30"/>
+        <location filename="newword.cpp" line="47"/>
+        <source>Could not open file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.cpp" line="105"/>
+        <source>ADD to dict</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="newword.cpp" line="105"/>
+        <source>are you sure</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Preferences</name>
     <message>
         <location filename="preferences.ui" line="14"/>
@@ -186,57 +298,72 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="115"/>
+        <location filename="preferences.ui" line="108"/>
+        <source>coffee</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="preferences.ui" line="113"/>
+        <source>dolphin.qss</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="preferences.ui" line="118"/>
+        <source>pagefold</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="preferences.ui" line="130"/>
         <source>Splash Screen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="126"/>
+        <location filename="preferences.ui" line="141"/>
         <source>Language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="134"/>
+        <location filename="preferences.ui" line="149"/>
         <source>Malayalam</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="139"/>
+        <location filename="preferences.ui" line="154"/>
         <source>English</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="153"/>
+        <location filename="preferences.ui" line="168"/>
         <source>Translator</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="168"/>
+        <location filename="preferences.ui" line="183"/>
         <source>Show ambiguity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="175"/>
+        <location filename="preferences.ui" line="190"/>
         <source>Mark Unknown Words</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="192"/>
+        <location filename="preferences.ui" line="207"/>
         <source>Amplitude</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="213"/>
+        <location filename="preferences.ui" line="228"/>
         <source>WordGap</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="231"/>
+        <location filename="preferences.ui" line="246"/>
         <source>Pitch Adjustment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="249"/>
+        <location filename="preferences.ui" line="264"/>
         <source>Speed</source>
         <translation type="unfinished"></translation>
     </message>
@@ -249,83 +376,113 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="translator.ui" line="22"/>
+        <location filename="translator.ui" line="25"/>
         <source>Malayalam to English</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="translator.ui" line="27"/>
+        <location filename="translator.ui" line="30"/>
         <source>English to Malayalam</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="translator.ui" line="55"/>
+        <location filename="translator.ui" line="62"/>
         <source>&amp;File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="translator.ui" line="65"/>
+        <location filename="translator.ui" line="72"/>
         <source>&amp;Edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="translator.ui" line="71"/>
+        <location filename="translator.ui" line="78"/>
         <source>&amp;Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="translator.ui" line="78"/>
+        <location filename="translator.ui" line="85"/>
         <source>&amp;View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="translator.ui" line="118"/>
-        <source>&amp;New</source>
+        <location filename="translator.ui" line="92"/>
+        <source>&amp;Developer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="translator.ui" line="127"/>
-        <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="translator.ui" line="132"/>
-        <source>&amp;Convert file</source>
+        <location filename="translator.ui" line="96"/>
+        <source>&amp;Add New Rule</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="translator.ui" line="141"/>
-        <source>&amp;Exit</source>
+        <source>&amp;New</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="translator.ui" line="146"/>
-        <source>&amp;Preferences</source>
+        <location filename="translator.ui" line="150"/>
+        <source>&amp;Open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="translator.ui" line="155"/>
-        <source>&amp;About</source>
+        <source>&amp;Convert file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="translator.ui" line="164"/>
+        <source>&amp;Exit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="translator.ui" line="169"/>
+        <source>&amp;Preferences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="translator.ui" line="178"/>
+        <source>&amp;About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="translator.ui" line="187"/>
         <source>&amp;PLay</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="translator.ui" line="167"/>
+        <location filename="translator.ui" line="190"/>
         <source>Ctrl+P</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="translator.ui" line="176"/>
+        <location filename="translator.ui" line="199"/>
         <source>&amp;Translate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="translator.ui" line="179"/>
+        <location filename="translator.ui" line="202"/>
         <source>Ctrl+T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="translator.ui" line="207"/>
+        <source>mal-eng</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="translator.ui" line="212"/>
+        <source>eng-mal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="translator.ui" line="217"/>
+        <source>&amp;Compile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="translator.ui" line="222"/>
+        <source>&amp;Add New Word</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

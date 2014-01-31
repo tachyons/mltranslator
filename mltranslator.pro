@@ -17,20 +17,23 @@ SOURCES += main.cpp\
         about.cpp \
     convertfiles.cpp \
     preferences.cpp \
-    newword.cpp
+    newword.cpp \
+    newparadigm.cpp
 
 
 HEADERS  += translator.h\
             about.h \
     convertfiles.h \
     preferences.h \
-    newword.h
+    newword.h \
+    newparadigm.h
 
 FORMS    += translator.ui\
             about.ui \
     convertfiles.ui \
     preferences.ui \
-    newword.ui
+    newword.ui \
+    newparadigm.ui
 
 TRANSLATIONS = mltranslator_mal.ts \
                 mltranslator_eng.ts

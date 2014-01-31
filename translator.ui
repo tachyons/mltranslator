@@ -101,6 +101,8 @@
     <addaction name="menu_Add_New_Rule"/>
     <addaction name="action_Compile"/>
     <addaction name="action_Add_New_Word"/>
+    <addaction name="action_Add_a_BiDix_entry"/>
+    <addaction name="action_Add_paradigm"/>
    </widget>
    <addaction name="menu_File"/>
    <addaction name="menu_Edit"/>
@@ -220,6 +222,16 @@
   <action name="action_Add_New_Word">
    <property name="text">
     <string>&amp;Add New Word</string>
+   </property>
+  </action>
+  <action name="action_Add_a_BiDix_entry">
+   <property name="text">
+    <string>&amp;Add a BiDix entry</string>
+   </property>
+  </action>
+  <action name="action_Add_paradigm">
+   <property name="text">
+    <string>&amp;Add paradigm</string>
    </property>
   </action>
  </widget>

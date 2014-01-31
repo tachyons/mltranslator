@@ -7,6 +7,7 @@
 #include "convertfiles.h"
 #include "preferences.h"
 #include "newword.h"
+#include "newparadigm.h"
 #include <QFile>
 #include <QFileDialog>
 #include <QMessageBox>
@@ -60,6 +61,10 @@ private slots:
     void on_action_Compile_triggered();
 
     void on_action_Add_New_Word_triggered();
+
+    void on_action_Add_paradigm_triggered();
+
+    void on_action_Add_a_BiDix_entry_triggered();
 
 private:
     Ui::Translator *ui;

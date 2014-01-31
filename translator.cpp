@@ -196,3 +196,21 @@ void Translator::on_action_Add_New_Word_triggered()
     new_word->exec();
 
 }
+
+void Translator::on_action_Add_paradigm_triggered()
+{
+    newparadigm *paradigm=new newparadigm;
+    paradigm->exec();
+}
+
+void Translator::on_action_Add_a_BiDix_entry_triggered()
+{
+    QProcess *mal_eng=new QProcess;
+    QString workdir=QDir::homePath();
+    mal_eng->setWorkingDirectory(workdir.append("/apertium-mal-eng"));
+    mal_eng->setWorkingDirectory(workdir);
+    QStringList arguments;
+    arguments << "apertium-mal-eng.mal-eng.dix";
+    mal_eng->start("gedit",arguments);
+    mal_eng->waitForStarted(-1);
+}

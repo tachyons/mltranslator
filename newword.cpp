@@ -63,7 +63,7 @@ void NewWord::initilise()
 
     QDomNode n = docElem.firstChild();
     QDomNodeList paradefs =doc.elementsByTagName("pardef");
-    qDebug()<<"\nlenght:"<<paradefs.length();
+    //qDebug()<<"\nlenght:"<<paradefs.length();
     for(uint i=0;i<paradefs.length();i++)
     {
         QDomElement paradef=paradefs.at(i).toElement();
