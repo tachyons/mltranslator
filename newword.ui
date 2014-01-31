@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>NewWord</class>
- <widget class="NewWord" name="NewWord">
+ <widget class="QDialog" name="NewWord">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -10,10 +10,7 @@
     <height>481</height>
    </rect>
   </property>
-  <property name="windowTitle">
-   <string>TransToolw</string>
-  </property>
-  <layout class="QVBoxLayout" name="verticalLayout_4">
+  <layout class="QVBoxLayout" name="_2">
    <item>
     <layout class="QVBoxLayout" name="verticalLayout_3">
      <item>
@@ -56,7 +53,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBox">
+          <widget class="QComboBox" name="pos_selector">
            <item>
             <property name="text">
              <string>Noun</string>
@@ -156,14 +153,6 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <customwidgets>
-  <customwidget>
-   <class>NewWord</class>
-   <extends>QWidget</extends>
-   <header>newword.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

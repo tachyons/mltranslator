@@ -17,7 +17,7 @@ SOURCES += main.cpp\
         about.cpp \
     convertfiles.cpp \
     preferences.cpp \
-    NewWord.cpp
+    newword.cpp
 
 
 HEADERS  += translator.h\
@@ -30,7 +30,7 @@ FORMS    += translator.ui\
             about.ui \
     convertfiles.ui \
     preferences.ui \
-    NewWord.ui
+    newword.ui
 
 TRANSLATIONS = mltranslator_mal.ts \
                 mltranslator_eng.ts

@@ -1,5 +1,5 @@
-#ifndef TRANSTOOLW_H
-#define TRANSTOOLW_H
+#ifndef NEWWORD_H
+#define NEWWORD_H
 
 #include <QDialog>
 #include <QDomDocument>
@@ -24,16 +24,25 @@ public:
     QFile file;
     explicit NewWord(QWidget *parent = 0);
     ~NewWord();
+    QString dixfile;
     void format_dix();
+    void update_preview();
 private slots:
     void on_action_Open_triggered();
     void initilise();
+    void loaddix();
 
     void on_parselection_currentTextChanged(const QString &arg1);
 
     void on_add_to_dict_clicked();
 
+    void on_preview_textChanged();
+
+
+    void on_pos_selector_currentIndexChanged(const QString &arg1);
+
 private:
+    QString current_pos;
     Ui::NewWord *ui;
 };
 
