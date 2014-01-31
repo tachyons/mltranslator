@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,18 +16,21 @@ SOURCES += main.cpp\
         translator.cpp\
         about.cpp \
     convertfiles.cpp \
-    preferences.cpp
+    preferences.cpp \
+    NewWord.cpp
 
 
 HEADERS  += translator.h\
             about.h \
     convertfiles.h \
-    preferences.h
+    preferences.h \
+    newword.h
 
 FORMS    += translator.ui\
             about.ui \
     convertfiles.ui \
-    preferences.ui
+    preferences.ui \
+    NewWord.ui
 
 TRANSLATIONS = mltranslator_mal.ts \
                 mltranslator_eng.ts

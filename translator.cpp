@@ -189,3 +189,10 @@ void Translator::on_action_Compile_triggered()
     compile.start("make");
     compile.waitForFinished(-1);
 }
+
+void Translator::on_action_Add_New_Word_triggered()
+{
+    NewWord *new_word=new NewWord;
+    new_word->exec();
+
+}

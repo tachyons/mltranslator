@@ -6,6 +6,7 @@
 #include "about.h"
 #include "convertfiles.h"
 #include "preferences.h"
+#include "newword.h"
 #include <QFile>
 #include <QFileDialog>
 #include <QMessageBox>
@@ -57,6 +58,8 @@ private slots:
     void on_actionEng_mal_triggered();
 
     void on_action_Compile_triggered();
+
+    void on_action_Add_New_Word_triggered();
 
 private:
     Ui::Translator *ui;

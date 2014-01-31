@@ -54,7 +54,7 @@
      <x>0</x>
      <y>0</y>
      <width>662</width>
-     <height>25</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -100,6 +100,7 @@
     </widget>
     <addaction name="menu_Add_New_Rule"/>
     <addaction name="action_Compile"/>
+    <addaction name="action_Add_New_Word"/>
    </widget>
    <addaction name="menu_File"/>
    <addaction name="menu_Edit"/>
@@ -214,6 +215,11 @@
   <action name="action_Compile">
    <property name="text">
     <string>&amp;Compile</string>
+   </property>
+  </action>
+  <action name="action_Add_New_Word">
+   <property name="text">
+    <string>&amp;Add New Word</string>
    </property>
   </action>
  </widget>
