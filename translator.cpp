@@ -189,15 +189,15 @@ void Translator::on_actionMal_eng_triggered()
 
 void Translator::on_actionEng_mal_triggered()
 {
-    QProcess eng_mal;
+    QProcess *eng_mal=new QProcess;
     QString workdir=QDir::homePath();
-    eng_mal.setWorkingDirectory(workdir.append("/apertium-mal-eng"));
-    eng_mal.setWorkingDirectory(workdir);
+    eng_mal->setWorkingDirectory(workdir.append("/apertium-mal-eng"));
+    eng_mal->setWorkingDirectory(workdir);
     //mal_eng.start("gedit");
     QStringList arguments;
-    arguments << "apertium-mal-eng.mal-eng.t1x"<<"apertium-mal-eng.mal-eng.t2x"<<"apertium-mal-eng.mal-eng.t3x";
-    eng_mal.start("gedit",arguments);
-    eng_mal.waitForStarted(-1);
+    arguments << "apertium-mal-eng.eng-mal.t1x"<<"apertium-mal-eng.eng-mal.t2x"<<"apertium-mal-eng.eng-mal.t3x";
+    eng_mal->start("gedit",arguments);
+    eng_mal->waitForStarted(-1);
 }
 
 void Translator::on_action_Compile_triggered()
