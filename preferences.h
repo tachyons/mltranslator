@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QSettings>
 #include<QDebug>
+#include <QTranslator>
 
 namespace Ui {
 class Preferences;
@@ -24,7 +25,10 @@ public:
     bool IsShowAmbiguity;
     int SoundAmplitude;
     bool MarkUnknownWords;
-
+    int SoundPitch;
+    int SoundSpeed;
+    int SoundGap;
+    int SoundGender;
     
 private slots:
     void on_listWidget_currentRowChanged(int currentRow);
@@ -52,6 +56,8 @@ private slots:
     void on_SpeedSlider_sliderMoved(int position);
 
     void on_ThemeSlector_currentTextChanged(const QString &arg1);
+
+    void on_gender_selector_currentIndexChanged(int index);
 
 private:
     Ui::Preferences *ui;

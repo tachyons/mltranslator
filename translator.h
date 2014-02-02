@@ -34,7 +34,10 @@ public:
     bool IsShowAmbiguity;
     int SoundAmplitude;
     bool MarkUnknownWords;
-    
+    int SoundPitch;
+    int SoundSpeed;
+    int SoundGap;
+    int SoundGender;
 private slots:
     void on_action_New_triggered();
 

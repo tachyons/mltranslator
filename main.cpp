@@ -7,9 +7,8 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     QTranslator translator;
     translator.load("mltranslator_mal");
-    a.installTranslator(&translator);
+    //a.installTranslator(&translator);
     Translator w;
     w.show();
-    
     return a.exec();
 }

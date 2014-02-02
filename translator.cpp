@@ -10,6 +10,7 @@ Translator::Translator(QWidget *parent) :
     QSettings settings("Tachyons Creations", "mltranslator");
     LoadSettings();
 
+
 }
 
 Translator::~Translator()
@@ -99,9 +100,23 @@ void Translator::on_action_PLay_triggered()
    QProcess play;
    QString command;
    command+="espeak ";
-   command+="-v ml ";
+   command+="-v ml";
+   if(SoundGender==0)
+   {
+       command+="+12";
+   }
+   command+=" ";
    command+="-a ";
    command+=QString::number(SoundAmplitude);
+   command+=" ";
+   command+="-g ";
+   command+=QString::number(SoundGap);
+   command+=" ";
+   command+="-p ";
+   command+=QString::number(SoundPitch);
+   command+=" ";
+   command+="-p ";
+   command+=QString::number(SoundSpeed);
    command+=" \"";
    command+=ui->target_text->toPlainText();
    command+=" \"";
@@ -138,6 +153,7 @@ void Translator::on_action_Preferences_triggered()
     //connect(dialog,SIGNAL(destroyed(QObject* )),this,SLOT(LoadSettings()));
     dialog->exec();
     LoadSettings();
+    //retranslateUi();
     //dialog->connect(dialog,SIGNAL(destroyed(QObject*)),this,SLOT(LoadSettings()));
 }
 void Translator::LoadSettings()
@@ -150,6 +166,10 @@ void Translator::LoadSettings()
     IsSplashScreen=settings.value("splashscreen").toBool();
     SoundAmplitude=settings.value("soundamplitude").toInt();
     MarkUnknownWords=settings.value("unknownwords").toBool();
+    SoundPitch=settings.value("soundpitch").toInt();
+    SoundSpeed=settings.value("soundspeed").toInt();
+    SoundGender=settings.value("soundgender").toInt();
+    SoundGap=settings.value("soundgap").toInt();
     settings.endGroup();
     qDebug()<<"Loaded to translator";
 }
@@ -214,3 +234,7 @@ void Translator::on_action_Add_a_BiDix_entry_triggered()
     mal_eng->start("gedit",arguments);
     mal_eng->waitForStarted(-1);
 }
+/*void Translator::retranslateUi()
+{
+    ui->Translator.retranslateUi();
+}*/
