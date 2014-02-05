@@ -107,8 +107,8 @@ void NewWord::on_add_to_dict_clicked()
     {
         return;
     }
-    QString word=ui->word->text();
-    QString lemma=ui->lemma->text();
+    QString lemma=ui->word->text();
+    QString word=ui->lemma->text();
     QString paradigm=ui->parselection->currentText();
     QTextStream out(&file);
     QDomNode section=doc.elementsByTagName("section").at(0);
