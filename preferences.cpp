@@ -101,6 +101,7 @@ void Preferences::on_AmplitudeSlider_sliderMoved(int position)
 void Preferences::on_buttonBox_rejected()
 {
     LoadSettings();
+    this->close();
 }
 
 void Preferences::on_buttonBox_accepted()
@@ -135,7 +136,8 @@ void Preferences::on_SpeedSlider_sliderMoved(int position)
 
 void Preferences::on_ThemeSlector_currentTextChanged(const QString &arg1)
 {
-    //qApp->setStyleSheet(arg1);
+    //qApp->setStyle(QStyleFactory::create("Fusion"));
+    qApp->setStyleSheet(arg1);
     //QMessageBox::warning(this, tr("translator"), tr("This feature is not yet implemented"),  QMessageBox::Cancel);
 
 }
