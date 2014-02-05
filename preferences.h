@@ -5,6 +5,7 @@
 #include <QSettings>
 #include<QDebug>
 #include <QTranslator>
+#include <QMessageBox>
 
 namespace Ui {
 class Preferences;
@@ -58,6 +59,10 @@ private slots:
     void on_ThemeSlector_currentTextChanged(const QString &arg1);
 
     void on_gender_selector_currentIndexChanged(int index);
+
+    void on_IsSplashScreen_clicked();
+
+    void on_LanguageSelector_currentIndexChanged(int index);
 
 private:
     Ui::Preferences *ui;

@@ -135,11 +135,23 @@ void Preferences::on_SpeedSlider_sliderMoved(int position)
 
 void Preferences::on_ThemeSlector_currentTextChanged(const QString &arg1)
 {
-    qApp->setStyleSheet(arg1);
+    //qApp->setStyleSheet(arg1);
+    //QMessageBox::warning(this, tr("translator"), tr("This feature is not yet implemented"),  QMessageBox::Cancel);
+
 }
 
 
 void Preferences::on_gender_selector_currentIndexChanged(int index)
 {
     SoundGender=index;
+}
+
+void Preferences::on_IsSplashScreen_clicked()
+{
+    QMessageBox::warning(this, tr("translator"), tr("This feature is not yet implemented"),  QMessageBox::Cancel);
+}
+void Preferences::on_LanguageSelector_currentIndexChanged(int index)
+{
+    QMessageBox::warning(this, tr("translator"), tr("This feature is not yet implemented"),  QMessageBox::Cancel);
+
 }
