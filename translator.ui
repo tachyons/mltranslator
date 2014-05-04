@@ -30,6 +30,11 @@
         <string>English to Malayalam</string>
        </property>
       </item>
+      <item>
+       <property name="text">
+        <string>mal-eng-debug</string>
+       </property>
+      </item>
      </widget>
     </item>
     <item>
@@ -87,8 +92,27 @@
     <addaction name="action_PLay"/>
     <addaction name="action_Translate"/>
    </widget>
+   <widget class="QMenu" name="menu_Developer">
+    <property name="title">
+     <string>&amp;Developer</string>
+    </property>
+    <widget class="QMenu" name="menu_Add_New_Rule">
+     <property name="title">
+      <string>&amp;Add New Rule</string>
+     </property>
+     <addaction name="actionMal_eng"/>
+     <addaction name="actionEng_mal"/>
+    </widget>
+    <addaction name="menu_Add_New_Rule"/>
+    <addaction name="action_Compile"/>
+    <addaction name="action_Add_New_Word"/>
+    <addaction name="action_Add_a_BiDix_entry"/>
+    <addaction name="action_Add_paradigm"/>
+    <addaction name="action_Modes_Viewer"/>
+   </widget>
    <addaction name="menu_File"/>
    <addaction name="menu_Edit"/>
+   <addaction name="menu_Developer"/>
    <addaction name="menu_View"/>
    <addaction name="menu_Help"/>
   </widget>
@@ -99,8 +123,17 @@
      <height>12</height>
     </size>
    </property>
+   <property name="toolTip">
+    <string>tool bar</string>
+   </property>
    <property name="statusTip">
     <string extracomment="main toolbar"/>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonFollowStyle</enum>
    </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
@@ -184,6 +217,41 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionMal_eng">
+   <property name="text">
+    <string>mal-eng</string>
+   </property>
+  </action>
+  <action name="actionEng_mal">
+   <property name="text">
+    <string>eng-mal</string>
+   </property>
+  </action>
+  <action name="action_Compile">
+   <property name="text">
+    <string>&amp;Compile</string>
+   </property>
+  </action>
+  <action name="action_Add_New_Word">
+   <property name="text">
+    <string>&amp;Add New Word</string>
+   </property>
+  </action>
+  <action name="action_Add_a_BiDix_entry">
+   <property name="text">
+    <string>&amp;Add a BiDix entry</string>
+   </property>
+  </action>
+  <action name="action_Add_paradigm">
+   <property name="text">
+    <string>&amp;Add paradigm</string>
+   </property>
+  </action>
+  <action name="action_Modes_Viewer">
+   <property name="text">
+    <string>&amp;Modes Viewer</string>
    </property>
   </action>
  </widget>

@@ -13,6 +13,10 @@ Preferences::Preferences(QWidget *parent) :
     ui->IsSplashScreen->setChecked(IsSplashScreen);
     ui->ShowAmbiguity->setChecked(IsShowAmbiguity);
     ui->IsMarkUnknownWords->setChecked(MarkUnknownWords);
+    ui->PitchSlider->setValue(SoundPitch);
+    ui->WordGapSlider->setValue(SoundGap);
+    ui->SpeedSlider->setValue(SoundSpeed);
+    ui->gender_selector->setCurrentIndex(SoundGender);
     //connect(this,SIGNAL(destroyed()),parent,SLOT(LoadSettings()));
 }
 
@@ -35,6 +39,10 @@ void Preferences::LoadSettings()
     IsSplashScreen=settings.value("splashscreen").toBool();
     SoundAmplitude=settings.value("soundamplitude").toInt();
     MarkUnknownWords=settings.value("unknownwords").toBool();
+    SoundPitch=settings.value("soundpitch").toInt();
+    SoundSpeed=settings.value("soundspeed").toInt();
+    SoundGender=settings.value("soundgender").toInt();
+    SoundGap=settings.value("soundgap").toInt();
     settings.endGroup();
     qDebug()<<"Loaded";
 
@@ -49,6 +57,10 @@ void Preferences::StoreSettings()
     settings.setValue("splashscreen",IsSplashScreen);
     settings.setValue("soundamplitude",SoundAmplitude);
     settings.setValue("unknownwords",MarkUnknownWords);
+    settings.setValue("soundpitch",SoundPitch);
+    settings.setValue("soundspeed",SoundSpeed);
+    settings.setValue("soundgender",SoundGender);
+    settings.setValue("soundgap",SoundGap);
     settings.endGroup();
     qDebug()<<"stored from preferences";
 }
@@ -66,6 +78,19 @@ void Preferences::on_IsSplashScreen_toggled(bool checked)
 void Preferences::on_LanguageSelector_currentIndexChanged(const QString &arg1)
 {
     UiLanguage=arg1;
+    QTranslator translator;
+    if(arg1=="Malayalam")
+    {
+        qDebug()<<"malayalam";
+        translator.load("mltranslator_mal");
+    }
+    else if(arg1=="English")
+    {
+        qDebug()<<"english";
+        translator.load("mltranslator_eng");
+    }
+    //qApp->removeTranslator()
+    qApp->installTranslator(&translator);
 }
 
 void Preferences::on_AmplitudeSlider_sliderMoved(int position)
@@ -76,6 +101,7 @@ void Preferences::on_AmplitudeSlider_sliderMoved(int position)
 void Preferences::on_buttonBox_rejected()
 {
     LoadSettings();
+    this->close();
 }
 
 void Preferences::on_buttonBox_accepted()
@@ -95,20 +121,39 @@ void Preferences::on_IsMarkUnknownWords_toggled(bool checked)
 
 void Preferences::on_WordGapSlider_sliderMoved(int position)
 {
-
+    SoundGap=position;
 }
 
 void Preferences::on_PitchSlider_sliderMoved(int position)
 {
-
+    SoundPitch=position;
 }
 
 void Preferences::on_SpeedSlider_sliderMoved(int position)
 {
-
+    SoundSpeed=position;
 }
 
 void Preferences::on_ThemeSlector_currentTextChanged(const QString &arg1)
 {
+    //qApp->setStyle(QStyleFactory::create("Fusion"));
     qApp->setStyleSheet(arg1);
+    //QMessageBox::warning(this, tr("translator"), tr("This feature is not yet implemented"),  QMessageBox::Cancel);
+
+}
+
+
+void Preferences::on_gender_selector_currentIndexChanged(int index)
+{
+    SoundGender=index;
+}
+
+void Preferences::on_IsSplashScreen_clicked()
+{
+    QMessageBox::warning(this, tr("translator"), tr("This feature is not yet implemented"),  QMessageBox::Cancel);
+}
+void Preferences::on_LanguageSelector_currentIndexChanged(int index)
+{
+    QMessageBox::warning(this, tr("translator"), tr("This feature is not yet implemented"),  QMessageBox::Cancel);
+
 }

@@ -1,4 +1,5 @@
 #include "translator.h"
+#include "modesviewer.h"
 #include "ui_translator.h"
 
 Translator::Translator(QWidget *parent) :
@@ -9,6 +10,7 @@ Translator::Translator(QWidget *parent) :
     initialise_ui();
     QSettings settings("Tachyons Creations", "mltranslator");
     LoadSettings();
+
 
 }
 
@@ -99,9 +101,23 @@ void Translator::on_action_PLay_triggered()
    QProcess play;
    QString command;
    command+="espeak ";
-   command+="-v ml ";
+   command+="-v ml";
+   if(SoundGender==0)
+   {
+       command+="+12";
+   }
+   command+=" ";
    command+="-a ";
-   command+=QString(SoundAmplitude);
+   command+=QString::number(SoundAmplitude);
+   command+=" ";
+   command+="-g ";
+   command+=QString::number(SoundGap);
+   command+=" ";
+   command+="-p ";
+   command+=QString::number(SoundPitch);
+   command+=" ";
+   command+="-p ";
+   command+=QString::number(SoundSpeed);
    command+=" \"";
    command+=ui->target_text->toPlainText();
    command+=" \"";
@@ -117,8 +133,10 @@ QString Translator::get_lang()
 {
    if(ui->langComboBox->currentIndex()==0)
        return "mal-eng";
-   else
-       return "eng-mal";
+   else if(ui->langComboBox->currentIndex()==1)
+           return "eng-mal";
+   else return "mal-eng-debug";
+
 }
 
 void Translator::on_action_Exit_triggered()
@@ -138,6 +156,7 @@ void Translator::on_action_Preferences_triggered()
     //connect(dialog,SIGNAL(destroyed(QObject* )),this,SLOT(LoadSettings()));
     dialog->exec();
     LoadSettings();
+    //retranslateUi();
     //dialog->connect(dialog,SIGNAL(destroyed(QObject*)),this,SLOT(LoadSettings()));
 }
 void Translator::LoadSettings()
@@ -150,6 +169,81 @@ void Translator::LoadSettings()
     IsSplashScreen=settings.value("splashscreen").toBool();
     SoundAmplitude=settings.value("soundamplitude").toInt();
     MarkUnknownWords=settings.value("unknownwords").toBool();
+    SoundPitch=settings.value("soundpitch").toInt();
+    SoundSpeed=settings.value("soundspeed").toInt();
+    SoundGender=settings.value("soundgender").toInt();
+    SoundGap=settings.value("soundgap").toInt();
     settings.endGroup();
     qDebug()<<"Loaded to translator";
+}
+
+void Translator::on_actionMal_eng_triggered()
+{
+    QProcess *mal_eng=new QProcess;
+    QString workdir=QDir::homePath();
+    mal_eng->setWorkingDirectory(workdir.append("/apertium-mal-eng"));
+    mal_eng->setWorkingDirectory(workdir);
+    //mal_eng.start("gedit");
+    QStringList arguments;
+    arguments << "apertium-mal-eng.mal-eng.t1x"<<"apertium-mal-eng.mal-eng.t2x"<<"apertium-mal-eng.mal-eng.t3x";
+    mal_eng->start("gedit",arguments);
+    mal_eng->waitForStarted(-1);
+}
+
+void Translator::on_actionEng_mal_triggered()
+{
+    QProcess *eng_mal=new QProcess;
+    QString workdir=QDir::homePath();
+    eng_mal->setWorkingDirectory(workdir.append("/apertium-mal-eng"));
+    eng_mal->setWorkingDirectory(workdir);
+    //mal_eng.start("gedit");
+    QStringList arguments;
+    arguments << "apertium-mal-eng.eng-mal.t1x"<<"apertium-mal-eng.eng-mal.t2x"<<"apertium-mal-eng.eng-mal.t3x";
+    eng_mal->start("gedit",arguments);
+    eng_mal->waitForStarted(-1);
+}
+
+void Translator::on_action_Compile_triggered()
+{
+    QProcess compile;
+    QString workdir=QDir::homePath();
+    workdir=workdir.append("/apertium-mal-eng");
+    compile.setWorkingDirectory(workdir);
+    compile.start("make");
+    compile.waitForFinished(-1);
+}
+
+void Translator::on_action_Add_New_Word_triggered()
+{
+    NewWord *new_word=new NewWord;
+    new_word->exec();
+
+}
+
+void Translator::on_action_Add_paradigm_triggered()
+{
+    newparadigm *paradigm=new newparadigm;
+    paradigm->exec();
+}
+
+void Translator::on_action_Add_a_BiDix_entry_triggered()
+{
+    QProcess *mal_eng=new QProcess;
+    QString workdir=QDir::homePath();
+    mal_eng->setWorkingDirectory(workdir.append("/apertium-mal-eng"));
+    mal_eng->setWorkingDirectory(workdir);
+    QStringList arguments;
+    arguments << "apertium-mal-eng.mal-eng.dix";
+    mal_eng->start("gedit",arguments);
+    mal_eng->waitForStarted(-1);
+}
+/*void Translator::retranslateUi()
+{
+    ui->Translator.retranslateUi();
+}*/
+
+void Translator::on_action_Modes_Viewer_triggered()
+{
+    ModesViewer  *dialog = new ModesViewer();
+    dialog->show();
 }

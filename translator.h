@@ -6,6 +6,8 @@
 #include "about.h"
 #include "convertfiles.h"
 #include "preferences.h"
+#include "newword.h"
+#include "newparadigm.h"
 #include <QFile>
 #include <QFileDialog>
 #include <QMessageBox>
@@ -32,7 +34,10 @@ public:
     bool IsShowAmbiguity;
     int SoundAmplitude;
     bool MarkUnknownWords;
-    
+    int SoundPitch;
+    int SoundSpeed;
+    int SoundGap;
+    int SoundGender;
 private slots:
     void on_action_New_triggered();
 
@@ -51,6 +56,20 @@ private slots:
 
     void on_action_Preferences_triggered();
     void LoadSettings();
+
+    void on_actionMal_eng_triggered();
+
+    void on_actionEng_mal_triggered();
+
+    void on_action_Compile_triggered();
+
+    void on_action_Add_New_Word_triggered();
+
+    void on_action_Add_paradigm_triggered();
+
+    void on_action_Add_a_BiDix_entry_triggered();
+
+    void on_action_Modes_Viewer_triggered();
 
 private:
     Ui::Translator *ui;

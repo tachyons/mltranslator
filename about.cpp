@@ -32,3 +32,4 @@ void About::on_close_button_clicked()
 {
     close();
 }
+

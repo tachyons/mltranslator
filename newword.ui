@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NewWord</class>
+ <widget class="QDialog" name="NewWord">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>431</width>
+    <height>481</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Lemma</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lemma"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>Word</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="word"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>pos</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="pos_selector">
+           <item>
+            <property name="text">
+             <string>Noun</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Verb</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Adjective</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Adverb</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>paradigm</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="parselection"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>preview</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTextBrowser" name="preview"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="add_to_dict">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string>Add to monolingual dictionary</string>
+       </property>
+       <property name="text">
+        <string>add</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+  <action name="action_Open">
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+  </action>
+  <action name="action_Close">
+   <property name="text">
+    <string>&amp;Close</string>
+   </property>
+  </action>
+  <action name="action_Exit">
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="text">
+    <string> &amp;About</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
