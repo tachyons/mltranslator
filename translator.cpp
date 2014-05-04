@@ -1,4 +1,5 @@
 #include "translator.h"
+#include "modesviewer.h"
 #include "ui_translator.h"
 
 Translator::Translator(QWidget *parent) :
@@ -132,8 +133,10 @@ QString Translator::get_lang()
 {
    if(ui->langComboBox->currentIndex()==0)
        return "mal-eng";
-   else
-       return "eng-mal";
+   else if(ui->langComboBox->currentIndex()==1)
+           return "eng-mal";
+   else return "mal-eng-debug";
+
 }
 
 void Translator::on_action_Exit_triggered()
@@ -238,3 +241,9 @@ void Translator::on_action_Add_a_BiDix_entry_triggered()
 {
     ui->Translator.retranslateUi();
 }*/
+
+void Translator::on_action_Modes_Viewer_triggered()
+{
+    ModesViewer  *dialog = new ModesViewer();
+    dialog->show();
+}

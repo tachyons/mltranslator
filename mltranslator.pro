@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     convertfiles.cpp \
     preferences.cpp \
     newword.cpp \
-    newparadigm.cpp
+    newparadigm.cpp \
+    modesviewer.cpp
 
 
 HEADERS  += translator.h\
@@ -26,14 +27,16 @@ HEADERS  += translator.h\
     convertfiles.h \
     preferences.h \
     newword.h \
-    newparadigm.h
+    newparadigm.h \
+    modesviewer.h
 
 FORMS    += translator.ui\
             about.ui \
     convertfiles.ui \
     preferences.ui \
     newword.ui \
-    newparadigm.ui
+    newparadigm.ui \
+    modesviewer.ui
 
 TRANSLATIONS = mltranslator_mal.ts \
                 mltranslator_eng.ts

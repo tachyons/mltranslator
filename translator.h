@@ -69,6 +69,8 @@ private slots:
 
     void on_action_Add_a_BiDix_entry_triggered();
 
+    void on_action_Modes_Viewer_triggered();
+
 private:
     Ui::Translator *ui;
     void initialise_ui();

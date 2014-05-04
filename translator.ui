@@ -30,6 +30,11 @@
         <string>English to Malayalam</string>
        </property>
       </item>
+      <item>
+       <property name="text">
+        <string>mal-eng-debug</string>
+       </property>
+      </item>
      </widget>
     </item>
     <item>
@@ -103,6 +108,7 @@
     <addaction name="action_Add_New_Word"/>
     <addaction name="action_Add_a_BiDix_entry"/>
     <addaction name="action_Add_paradigm"/>
+    <addaction name="action_Modes_Viewer"/>
    </widget>
    <addaction name="menu_File"/>
    <addaction name="menu_Edit"/>
@@ -241,6 +247,11 @@
   <action name="action_Add_paradigm">
    <property name="text">
     <string>&amp;Add paradigm</string>
+   </property>
+  </action>
+  <action name="action_Modes_Viewer">
+   <property name="text">
+    <string>&amp;Modes Viewer</string>
    </property>
   </action>
  </widget>
