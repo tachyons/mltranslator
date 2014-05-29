@@ -18,6 +18,11 @@ public:
     ~ModesViewer();
     void loadmode();
     void initialise_ui();
+private slots:
+    void on_inputText_textChanged();
+
+    void on_processButton_clicked();
+
 private:
     Ui::ModesViewer *ui;
     QString modefile;

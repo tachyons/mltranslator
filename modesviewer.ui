@@ -6,14 +6,67 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>844</width>
+    <height>528</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout"/>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0,5">
+     <item>
+      <widget class="QPlainTextEdit" name="inputText"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="processButton">
+       <property name="text">
+        <string>process</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="modeTable">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="gridStyle">
+        <enum>Qt::SolidLine</enum>
+       </property>
+       <property name="rowCount">
+        <number>0</number>
+       </property>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>500</number>
+       </attribute>
+       <attribute name="horizontalHeaderMinimumSectionSize">
+        <number>500</number>
+       </attribute>
+       <attribute name="verticalHeaderDefaultSectionSize">
+        <number>100</number>
+       </attribute>
+       <attribute name="verticalHeaderMinimumSectionSize">
+        <number>100</number>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>New Column</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>output</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
