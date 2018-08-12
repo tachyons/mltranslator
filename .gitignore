@@ -3,3 +3,8 @@
 *.user.*
 *.~
 Makefile
+ui_*.h
+qrc_*.cpp
+moc_*
+mltranslator
+.qmake.*
