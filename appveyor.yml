@@ -7,3 +7,6 @@ install:
 build_script:
   - qmake mltranslator.pro
   - mingw32-make
+artifacts:
+  - path: release/mltranslator.exe
+    name: Translator
